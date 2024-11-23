@@ -127,10 +127,16 @@ ol {
   text-decoration-thickness: from-font;
 }
 
-
 .search-form__checkbox-list {
   display: inline-flex;
   gap: 15px;
+}
+
+.search-form__pseudo-checkbox {
+  width: 19px;
+  height: 19px;
+  border: 1px solid white;
+  cursor: pointer;
 }
 
 .search-form__pseudo-checkbox:active {
@@ -140,13 +146,6 @@ ol {
   outline-width: 1px;
   outline-offset: -2px;
   background-color: #fff;
-}
-
-.search-form__pseudo-checkbox {
-  width: 19px;
-  height: 19px;
-  border: 1px solid white;
-  cursor: pointer;
 }
 
 .button {
@@ -194,11 +193,10 @@ ol {
   gap: 26px;
   width: 100%;
   height: 100%;
-  
 }
 
 .title {
-  font-family: 'Oswald';
+  font-family: Oswald;
   font-weight: bold;
   font-size: 75px;
   text-transform: uppercase;
@@ -222,7 +220,6 @@ ol {
 }
 
 .content__card-link {
-  display: block;
   text-decoration: none;
   color: #fff;
   margin: 2px;
