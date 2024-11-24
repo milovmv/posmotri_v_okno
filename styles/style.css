@@ -71,8 +71,9 @@ ol {
 
 .result__video {
   width: 100%;
-  height: 100%;
+  height: 386px;
   object-fit: fill;
+  object-position: center;
 }
 
 .search-form {
@@ -108,7 +109,6 @@ ol {
   border-top: 1px solid white;
   border-bottom: 1px solid white;
   font-family: inherit;
-  cursor: pointer;
   appearance: none;
   font-size: 18px;
   width: 225px;
@@ -119,6 +119,10 @@ ol {
   outline: none;
 }
 
+.search-form__textfield:hover {
+    cursor: text;
+  }
+
 .search-form__label:has(:focus-visible) {
   border: 1px solid #fff;
   padding: 1px;
@@ -128,6 +132,7 @@ ol {
   text-decoration: underline;
   text-underline-position: under;
   text-decoration-thickness: from-font;
+  cursor: pointer;
 }
 
 .search-form__checkbox-list {
@@ -142,14 +147,14 @@ ol {
   cursor: pointer;
 }
 
-.search-form__pseudo-checkbox:active {
-  border: 2px solid #fff;
-  outline-style: solid;
-  outline-color: #1b1919;
-  outline-width: 1px;
-  outline-offset: -2px;
-  background-color: #fff;
-}
+input[type='checkbox']:checked + .search-form__pseudo-checkbox {
+    border: 2px solid #fff;
+    outline-style: solid;
+    outline-color: #1b1919;
+    outline-width: 1px;
+    outline-offset: -2px;
+    background-color: #fff;
+  }
 
 .button {
   cursor: pointer;
@@ -199,7 +204,7 @@ ol {
 }
 
 .title {
-  font-family: Oswald;
+  font-family: 'Oswald', 'Arial', sans-serif;
   font-weight: bold;
   font-size: 75px;
   text-transform: uppercase;
@@ -214,12 +219,19 @@ ol {
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: 30px;
   justify-content: space-between;
   max-height: 298px;
-  overflow: scroll;
+  overflow: auto;
   scrollbar-width: none;
   padding: 0;
+}
+
+.content__list-item {
+    margin-bottom: 30px;
+}
+
+.content__list-item:last-child {
+    margin-bottom: 0px;
 }
 
 .content__card-link {
@@ -249,6 +261,9 @@ ol {
 .content__video-card-title {
   text-transform: uppercase;
   line-height: 100%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .content__video-card-description {
