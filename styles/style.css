@@ -121,6 +121,7 @@ ol {
 
 .search-form__textfield:hover {
     cursor: text;
+    text-decoration: none;
   }
 
 .search-form__label:has(:focus-visible) {
@@ -265,6 +266,7 @@ input[type='checkbox']:checked + .search-form__pseudo-checkbox {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+  max-width: 201px;
 }
 
 .content__video-card-description {
